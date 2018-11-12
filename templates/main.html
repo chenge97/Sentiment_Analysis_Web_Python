@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Message Classifier</title>
+
+	<link rel="stylesheet" href="{{url_for('static',filename='css/message_classifier.css')}}">
+	<link rel="stylesheet" href="{{url_for('static',filename='css/normalize.css')}}">
+	<script type="text/javascript" src="{{ url_for('static', filename='JS/modernizr-custom.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='JS/functions.js') }}"></script>
+
+</head>
+<body class="result_background">
+	<header>
+		<ul class="options">
+		{% for item in options %}
+			<li><a href="{{ url_for(item) }}">{{item}}</a></li>
+		{% endfor %}
+		</ul>
+		
+	</header>
+	{%block content%}
+	{%endblock%}
+	 
+
+
+</body>
+</html>
