@@ -1,0 +1,38 @@
+{% extends "main.html"%}
+
+{%block content%}
+<div class="english_content">
+	<p> Clasificador de mensajes</p>
+	<form  action="" method="post" role="form">
+		{{ form.csrf }}
+    <div>
+      	
+
+      	<center>{{ form.message(placeholder="Escribe tu mensaje y la app se encargará de checar si el mensaje es negativo o positivo.", autocomplete="off")}}<br></center>
+      	{{form.button(class="myButton")}}
+      	 
+
+    </div>
+    	
+ </div> 
+ 	{% with messages = get_flashed_messages(with_categories=true) %}
+
+            {% if messages %}
+        {% for message in messages %}
+        	
+            {% if "Por favor llene el campo" not in message[1]: %}
+              <div class="result">{{ message[1] }}</div>
+              {% if "negativo" in message[1]:%}
+              <style type="text/css"> .result_background{background-color: #FB4A03;}</style>
+              {% endif %}
+            {% endif %}
+ 
+            {% if "Por favor llene el campo" in message[1]: %}
+                <p class="error">{{ message[1] }}</p>
+            {% endif %}
+            
+        {% endfor %}
+            {% endif %}
+        
+        {% endwith %}
+  {%endblock%}  
