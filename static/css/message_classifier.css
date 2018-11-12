@@ -1,0 +1,97 @@
+header{
+	width:100%;
+	height: 40px;
+	background-color: #F5C319;
+}
+
+body{
+	background-color: #29DA66;
+	width: 100%;
+	height: 635px;
+	top: 0px;
+}
+
+.options {
+  float: right;
+  margin-top: 8px;
+  margin-right: 200px;
+
+
+
+}
+
+.options li { /*Deleting the li dot*/
+  display: inline;
+}
+
+.options li + li { /*Space between options*/
+  margin-left: 35px;
+
+}
+
+.options li a { /*To delete the line of the hyperlink*/
+  color: #000000;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+
+}
+
+p {
+	text-align: center;
+	font-size: 80px;
+	color: #FFFFFF;
+}
+
+input{
+	height: 40px;
+	width: 900px;
+
+}
+
+.result{
+	font-size: 18px;
+	color: #FFFFFF;
+	margin-top: 30px;
+	margin-left: 320px;
+}
+
+.error{
+	font-size: 24px;
+	color: #FB4A03;
+	margin-top: 30px;
+	position: fixed;
+	margin-left: 320px;
+}
+
+.myButton {
+	-moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
+	-webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
+	box-shadow:inset 0px 39px 0px -24px #e67a73;
+	background-color:#e4685d;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:18px;
+	text-decoration:none;
+	text-shadow:1px -1px 0px #b23e35;
+	float: right;
+	margin-right: 320px;
+	margin-top: 40px;	
+	height: 70px;
+	width: 150px;
+}
+.myButton:hover {
+	background-color:#eb675e;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
