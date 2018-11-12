@@ -1,0 +1,38 @@
+{% extends "main.html"%}
+
+{%block content%}
+<div class="english_content">
+	<p> Message Classifier </p>
+	<form  action="" method="post" role="form">
+		{{ form.csrf }}
+    <div>
+      	
+
+      	<center>{{ form.message(placeholder="Write your message and the app is going to guess whether your message is positive or negative.", autocomplete="off")}}<br></center>
+      	{{form.button(class="myButton")}}
+      	 
+
+    </div>
+    	
+ </div> 
+ 	{% with messages = get_flashed_messages(with_categories=true) %}
+
+            {% if messages %}
+        {% for message in messages %}
+        	
+            {% if "Please introduce a message" not in message[1]: %}
+              <div class="result">{{ message[1] }}</div>
+              {% if "negative" in message[1]:%}
+              <style type="text/css"> .result_background{background-color: #FB4A03;;}</style>
+              {% endif %}
+            {% endif %}
+ 
+            {% if "Please introduce a message" in message[1]: %}
+                <p class="error">{{ message[1] }}</p>
+            {% endif %}
+            
+        {% endfor %}
+            {% endif %}
+        
+        {% endwith %}
+  {%endblock%}  
